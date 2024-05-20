@@ -73,10 +73,10 @@ const Recipe = (props) => {
           {loading && <Spinner />}
           <div className="container">
           <div className="row">
-            {hits.map((item, uri) => {
+            {hits.map((item, index) => {
               return (
                 <div className="col-md-4">
-                  <FoodItem recipe={item.recipe} />
+                  <FoodItem key={index} recipe={item.recipe} />
                 </div>
               );
             })}
